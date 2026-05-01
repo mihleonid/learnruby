@@ -6,7 +6,7 @@ p Time.parse('5:45').strftime("%H:%M")
 t=Time.now
 t.to_i#to sec
 Time.at(0,in:'Z')#from sec Z for UTC. May be ommit if does not care
-#.new(year,month,day,hour,minute,sec). May be ommited. They are numeric or stringsw with ints
+#.new(year,month,day,hour,minute,sec). May be ommited. They are numeric or (for Time.new) strings with ints
 
 #Tally of displayed time:
 a='23:59'

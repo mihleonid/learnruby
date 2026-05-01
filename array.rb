@@ -20,7 +20,7 @@ p arr
 arr.sort!
 p arr
 p arr.size
-p arr.push(4)
+p arr.push(4)#arr.push(4,5)
 p arr<<5
 p arr.shift
 p arr
@@ -32,12 +32,31 @@ p arr.insert(3,*['preapple','prebanana'])#* just like python's
 #.uniq and .uniq!
 #.map!
 #.filter .reject
+p [1,2,3].rotate
+p [[[1,2],[3,4]],[5,6]].flatten
+p [[[1,2],[3,4]],[5,6]].flatten 1
+#.reverse! .flatten!
+#.repeated_permutation
+
+p [1,2,3]*3
+#& | automatic omits duplicates
+#+ and - for + and -
+p [1,2,3]*' ' # .join ' '
+#<=> lexicograph
+
+p [1,2,3].bsearch_index{_1>=2}
+#Array and range has .bsearch - first element with condition held
+#You can even
+p (0..).bsearch{_1>100}
+
+p [[1,2],[3,4]].to_h[1]
 
 
 #Enumerable's methods
 #.each as for alternative
 p (1..3).map.with_index{|x,i| x*i}
 p (1..3).filter(&:even?)
+p (1..3).count(&:even?)
 #.flat_map is like map but also flattens one time
 #.filter_map .map.compact
 #.compact removes nil and converst to array
