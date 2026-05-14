@@ -51,6 +51,8 @@ p (0..).bsearch{_1>100}
 
 p [[1,2],[3,4]].to_h[1]
 
+p [[1,2],[3,4]].transpose
+
 
 #Enumerable's methods
 #.each as for alternative
