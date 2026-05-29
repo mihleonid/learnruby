@@ -2,6 +2,7 @@
 p [1,2].product([2,3],[4,5])
 p [1,2,3,5].combination(2).to_a#If we write .to_a that means method is returning Enumerator or smt
 p [1,2,3,5].permutation(2).to_a
+p [*0..3].repeated_permutation(2).to_a#Cartesian power
 p [1,2,3].permutation.to_a
 p [].empty?
 p [1,2,3].values_at(2,1,0)==[1,2,3].reverse
