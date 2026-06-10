@@ -32,6 +32,10 @@ p arr.unshift(1)
 p arr
 p arr.insert(3,'apple','banana')
 p arr.insert(3,*['preapple','prebanana'])#* just like python's
+p "Fill"
+p arr
+p arr.fill(0..2){_1}#There are other forms like .fill(val,from,cnt),.fill(val,cnt), .(val,a...b) etc. Or with block as shown.
+p arr
 #.delete_at .pop
 #.uniq and .uniq!
 #.map!
@@ -92,4 +96,7 @@ p (1..3).partition(&:even?)#array of two arrays [trues, falses]
 #.rindex (with block or element)
 #.zip returns array IMPORTANT! this is not obvious zip. Size is the same, some elements may be truncated and some replaced with nil.
 p (1..3).zip([1,2],1..100)
+a=[1,2,3,4]
+b=[?a,?b,?c]
+p a[...b.size].zip(b)#Python's zip
 #.cycle calls block repeatedly for all elements
