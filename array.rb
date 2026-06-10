@@ -1,6 +1,8 @@
 #Array-specific
 p [*0..10][(1..)%2]#Slices
-p ([[0]*3]*3).map(&:dup)#Fast 2d array
+p ([[0]*3]*3).map(&:dup)#2d array
+p [[0,1],[2,3]].sum(&:sum)#2d sum
+p [1,2,3].zip([4,5,6]).sum{_1*_2}#Dot product
 p [1,2].product([2,3],[4,5])
 p [1,2,3,5].combination(2).to_a#If we write .to_a that means method is returning Enumerator or smt
 p [1,2,3,5].permutation(2).to_a
