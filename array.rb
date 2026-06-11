@@ -99,4 +99,5 @@ p (1..3).zip([1,2],1..100)
 a=[1,2,3,4]
 b=[?a,?b,?c]
 p a[...b.size].zip(b)#Python's zip
+p a.fill(nil,a.size...b.size).zip(b)#Zip longest
 #.cycle calls block repeatedly for all elements
