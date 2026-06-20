@@ -1,0 +1,1 @@
+This generator can create constructions near real ruby code to help practice typing. But it can emmit not correct code (for example, Enumerator vs array). Another example - not respecting "\_1 in only inner block rule".
