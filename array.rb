@@ -1,4 +1,8 @@
 #Array-specific
+p [*0..10][(1..)%2]#Slices
+p ([[0]*3]*3).map(&:dup)#2d array
+p [[0,1],[2,3]].sum(&:sum)#2d sum
+p [1,2,3].zip([4,5,6]).sum{_1*_2}#Dot product
 p [1,2].product([2,3],[4,5])
 p [1,2,3,5].combination(2).to_a#If we write .to_a that means method is returning Enumerator or smt
 p [1,2,3,5].permutation(2).to_a
@@ -29,6 +33,10 @@ p arr.unshift(1)
 p arr
 p arr.insert(3,'apple','banana')
 p arr.insert(3,*['preapple','prebanana'])#* just like python's
+p "Fill"
+p arr
+p arr.fill(0..2){_1}#There are other forms like .fill(val,from,cnt),.fill(val,cnt), .(val,a...b) etc. Or with block as shown.
+p arr
 #.delete_at .pop
 #.uniq and .uniq!
 #.map!
@@ -55,7 +63,9 @@ p [[1,2],[3,4]].to_h[1]
 p [[1,2],[3,4]].transpose
 
 
-#Enumerable's methods
+p "Enumerable's methods"
+p (1..3).sum
+p (1..3).sum{_1**2}
 #.each as for alternative
 p (1..3).map.with_index{|x,i| x*i}
 p (1..3).filter(&:even?)
@@ -87,4 +97,8 @@ p (1..3).partition(&:even?)#array of two arrays [trues, falses]
 #.rindex (with block or element)
 #.zip returns array IMPORTANT! this is not obvious zip. Size is the same, some elements may be truncated and some replaced with nil.
 p (1..3).zip([1,2],1..100)
+a=[1,2,3,4]
+b=[?a,?b,?c]
+p a[...b.size].zip(b)#Python's zip
+p a.fill(nil,a.size...b.size).zip(b)#Zip longest
 #.cycle calls block repeatedly for all elements

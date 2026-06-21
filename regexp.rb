@@ -1,4 +1,8 @@
 p "abccabc".to_enum(:scan,'c').map{$`.size}#All indices of c in string
+p '12342'.chars.all? /\d/
+p '12342'.chars.all?(/\d/)
+p 'abd'[/ac|bd/]#precedence
+p '45df'.start_with?(/\d/)
 "
 $~: Returns a MatchData object, or nil.
 $&: Returns the matched part of the string, or nil.
