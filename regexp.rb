@@ -22,3 +22,5 @@ p /#{string_var}/
 p ['yes','no'].any?(/s/) #Any element matches? Also work with all? none? one?
 p 'ab3fjg8fdk9'.scan(/\d/).size
 p 'My ip is 127.0.0.1!'[/(\d+)\.(\d+)\.(\d+)\.(\d+)/,1] #Get i-th group
+p 'a,b  c;d'.split(/[\.,;]|\s+/)
+p 'abccdeeefhhh'.scan(/((.)\2*)/)
